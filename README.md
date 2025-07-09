@@ -1,17 +1,15 @@
 # TY Practicals
 
-## Student Details :
+## Student Details
 
-**`Name        ` :  Atharva Kote<br>
-`Roll Number ` :  73<br>
-`Department  ` :  Computer<br>
-`Division    ` :  B<br>
-`PRN Number  ` :  UCS23M1074<br>**
+**`Name` :  Atharva Kote<br>
+`Roll Number` :  74<br>
+`Department` :  Computer<br>
+`Division` :  B<br>
+`PRN Number` :  UCS23M1074<br>**
 
-## Course Details :
+## Course Details
 
 - **ADSAL**( Applied Data Structure & Algorithms Laboratory )
-  - **Course Code** : `PCCO204`
-  - `Assignment` : [ [Click Here](/ADS-Practical) ]
- 
-
+  - **Course Code** : `LCC306`
+  - `Assignment` : [ [Click Here](/ADSAL-Practicals) ]
