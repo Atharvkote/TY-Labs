@@ -10,7 +10,7 @@
 
 ## Course Details
 
-- **ADSAL**(  )
+- **ADSAL**( Applied Data Structure & Algorithms Laboratory )
   - **Course Code** : `LCC306`
   - **Faculty** : `Prof A. Bodhe`
   - **Credits** : `2 Credits`

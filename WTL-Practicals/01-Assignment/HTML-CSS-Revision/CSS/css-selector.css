@@ -1,0 +1,72 @@
+/* ======================================
+   CSS SELECTOR
+   ====================================== */
+
+/* 1. Element selector
+   --------------------
+   Selects ALL <p> elements on the page.
+   Useful when you want all paragraphs
+   to have the same style.
+*/
+p {
+  color: blue;
+}
+
+/* 2. Class selector
+   -----------------
+   Selects ALL elements that have class="highlight".
+   You can reuse this on many different elements,
+   like <p class="highlight"> or <div class="highlight">.
+*/
+.highlight {
+  background-color: yellow;
+}
+
+/* 3. ID selector
+   --------------
+   Selects ONE unique element with id="main-title".
+   IDs should be unique on the page, so this style
+   only applies to that one element.
+*/
+#main-title {
+  font-size: 24px;
+}
+
+/* 4. Group selector
+   -----------------
+   Selects multiple types of elements at once.
+   Here, it applies the same font family to
+   all <h1>, <h2>, and <h3> headings.
+*/
+h1, h2, h3 {
+  font-family: Arial, sans-serif;
+}
+
+/* 5. Attribute selector (presence)
+   --------------------------------
+   Selects all <input> elements that have ANY type attribute,
+   like <input type="text"> or <input type="password">.
+*/
+input[type] {
+  border: 1px solid #333;
+}
+
+/* 6. Attribute selector (specific value)
+   --------------------------------------
+   Selects only <input> elements where type="text",
+   like <input type="text">.
+   You can style text boxes differently this way.
+*/
+input[type="text"] {
+  background-color: #f0f0f0;
+}
+
+/* 7. Universal selector
+   ---------------------
+   Selects ALL elements on the page (* means everything).
+   Here, we use it to set box-sizing to border-box,
+   which makes padding and border stay inside the width.
+*/
+* {
+  box-sizing: border-box;
+}
