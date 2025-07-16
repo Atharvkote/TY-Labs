@@ -1,0 +1,104 @@
+# ---------------------
+# General
+# ---------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Logs
+*.log
+
+# Env files
+.env
+.env.*
+
+# System files
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Node modules (if frontend JS used)
+node_modules/
+
+# ---------------------
+# VS Code
+# ---------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# ---------------------
+# C++
+# ---------------------
+# Build files
+*.o
+*.obj
+*.so
+*.a
+*.out
+*.exe
+*.dll
+
+# CMake / Make
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Compilation database
+compile_commands.json
+
+# ---------------------
+# Java
+# ---------------------
+# Compiled class files
+*.class
+
+# Java JAR / WAR / EAR
+*.jar
+*.war
+*.ear
+
+# Maven
+target/
+
+# Gradle
+.gradle/
+build/
+out/
+
+# IntelliJ / Eclipse
+.idea/
+*.iml
+*.ipr
+*.iws
+*.classpath
+*.project
+*.settings/
+
+# ---------------------
+# Others (optional)
+# ---------------------
+# Python (if using scripts)
+__pycache__/
+*.py[cod]
+
+# macOS
+*.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ---------------------
+# End
+# ---------------------

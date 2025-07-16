@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* background-color: aqua; */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, black, rgb(47, 2, 78), rgb(96, 0, 128));
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* background: linear-gradient(90deg, rgba(81, 7, 211, 0.678), violet); */
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  font-size: larger;
+  color: white  ;
+}
+
+.bgt {
+  background: transparent;
+}
+
+.member {
+
+  cursor: pointer;
+  background: transparent;
+}
+.member:hover {
+    color: rgb(96, 0, 128);
+   transition: ease 1s;
+    transform: scale(1.05);
+}
+
+.image-div {
+  /* background-image: url('./avatar.png'); */
+  height: 200px;
+  width: 200px;
+}
+
+/* img{
+    box-shadow: 20px 10px 10px grey;
+} */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.upper {
+  display: flex;
+  gap: 50px;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.card {
+  text-align: center;
+  display: flex;
+  gap: 20px;
+  background: linear-gradient(135deg, rgba(81, 7, 211, 0.678), violet);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 30px;
+  /* background-color: bisque; */
+  box-shadow: 10px 10px 10px rgb(96, 0, 128);
+}
+
+.card:hover{
+    transition: ease 1s;
+    transform: scale(1.05);
+}

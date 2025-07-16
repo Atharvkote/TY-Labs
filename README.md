@@ -13,3 +13,7 @@
 - **ADSAL**( Applied Data Structure & Algorithms Laboratory )
   - **Course Code** : `LCC306`
   - `Assignment` : [ [Click Here](/ADSAL-Practicals) ]
+
+- **WTL**( Web Technology Laboratory )
+  - **Course Code** : `LCC306`
+  - `Assignment` : [ [Click Here](/WTL-Practicals) ]
