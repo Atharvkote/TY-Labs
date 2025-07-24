@@ -8,6 +8,11 @@
 `Division` :  B<br>
 `PRN Number` :  UCS23M1074<br>**
 
+
+| Language |
+|----------|
+|<img src="https://techstack-generator.vercel.app/java-icon.svg" width="100" height="100" alt="Java" />|
+
 ## Course Details
 
 - **ADSAL**( Applied Data Structure & Algorithms Laboratory )
