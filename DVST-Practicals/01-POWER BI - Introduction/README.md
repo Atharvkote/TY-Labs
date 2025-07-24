@@ -14,7 +14,7 @@ Power BI is a business analytics tool developed by Microsoft that enables users 
 
 ## Assignment Output
 
-The screenshot below represents a sample output from the Power BI assignment dashboard:
+The screenshot below represents output from the Power BI assignment dashboard:
 
 <div align="center">
    <img src="../../.git-config/output-snapshots/Assingment-01.png" alt="Assignment Screenshot" width="600"/>
