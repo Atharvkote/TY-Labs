@@ -7,9 +7,13 @@
     <th>Language</th>
   </tr>
   <tr>
-    <td><img src="https://techstack-generator.vercel.app/java-icon.svg" width="100" height="100" alt="Java" /></td>
+    <td align="center">
+      <img src="https://techstack-generator.vercel.app/java-icon.svg" width="100" height="100" alt="Java" /><br>
+      <strong>Java</strong>
+    </td>
   </tr>
 </table>
+
 
 </div>
 
