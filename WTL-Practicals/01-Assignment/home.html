@@ -3,137 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(
-          180deg,
-          #020107,
-          #020107,
-          #020107,
-          #020107,
-          #020107,
-          #061e7a
-        );
-      }
-
-      .container > img {
-        /* background-color: black; */
-        width: 80%;
-        height: 60vh;
-      }
-
-      .container {
-        display: flex;
-        justify-content: end;
-        height: fit-content;
-      }
-
-      h1 {
-        top: 20px;
-        left: 20px;
-        color: white;
-        font-size: 2.5rem;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      }
-
-      .header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(180deg, #020107, #061e7a, #020107);
-      }
-
-      .imgs {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .cards {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .card {
-          background: linear-gradient(180deg,#020107,#020107, #020107,#061e7a );
-        /* border-radius: 10px; */
-        display: flex;
-        align-items: center;
-        padding: 0px 50px ;
-        height: 400px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
-      }
-    </style>
+    <title>Samsung Showcase</title>
+    <link rel="stylesheet" href="home.css" />
   </head>
-
   <body>
     <div class="container">
       <img
         src="https://images.samsung.com/is/image/samsung/assets/pk/mobile/25_01/Galaxy_S25_Ultra_Main-KV_1440x640_normalKV_pc.jpg?imwidth=2560"
-        alt=""
+        alt="Samsung Banner"
       />
     </div>
+
     <div class="header">
       <h1>SAMSUNG</h1>
     </div>
 
-    <div class="cards">
-      <div class="card">
-        <img
-          src="https://www.bheshop.com/HtmlContent/SamsungS23en/images/main-kv-2023.png"
-          alt="Samsung Galaxy S25 Ultra"
-          class="imgs"
-        />
-        <div>
-          <h1 style="color: white; text-align: center; margin-top: 20px">
-            Samsung Galaxy S25 Ultra
-          </h1>
-          <p style="color: white; text-align: center; font-size: 1.2rem">
-            Experience the future of mobile technology with the Samsung Galaxy
-            S25 Ultra, featuring cutting-edge design and unparalleled
-            performance.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="https://images.samsung.com/is/image/samsung/assets/in/f2507/gnb/Galaxy-Z_Fold7_GNB_L1_Shop_88x88.png?$ORIGIN_PNG$"
-          alt="Samsung Galaxy S25 Ultra"
-          class="imgs"
-        />
-       <div>
-          <h1 style="color: white; text-align: center; margin-top: 20px">
-            Samsung Galaxy S25 Ultra
-          </h1>
-          <p style="color: white; text-align: center; font-size: 1.2rem">
-            Experience the future of mobile technology with the Samsung Galaxy
-            S25 Ultra, featuring cutting-edge design and unparalleled
-            performance.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="https://www.bheshop.com/HtmlContent/SamsungS23en/images/main-kv-2023.png"
-          alt="Samsung Galaxy S25 Ultra"
-          class="imgs"
-        />
-        <div>
-          <h1 style="color: white; text-align: center; margin-top: 20px">
-            Samsung Galaxy S25 Ultra
-          </h1>
-          <p style="color: white; text-align: center; font-size: 1.2rem">
-            Experience the future of mobile technology with the Samsung Galaxy
-            S25 Ultra, featuring cutting-edge design and unparalleled
-            performance.
-          </p>
-        </div>
+    <div class="card">
+      <img
+        src="https://www.bheshop.com/HtmlContent/SamsungS23en/images/main-kv-2023.png"
+        alt="Samsung Galaxy S25 Ultra"
+      />
+      <div class="card-text">
+        <h1>Samsung Galaxy S25 Ultra</h1>
+        <p>
+          Experience the future of mobile technology with the Samsung Galaxy S25
+          Ultra, featuring cutting-edge design and unparalleled performance.
+        </p>
       </div>
     </div>
+
+    <div class="grid-section">
+      <div class="product-card">
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="Galaxy S23 Ultra"
+        />
+        <h2>Galaxy S23 Ultra</h2>
+        <p>Professional camera system with 200MP, premium design & S-Pen.</p>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="https://www.gizmochina.com/wp-content/uploads/2023/04/Samsung-Galaxy-Z-Fold-5-1.jpg"
+          alt="Galaxy Z Fold5"
+        />
+        <h2>Galaxy Z Fold5</h2>
+        <p>Foldable innovation with multitasking and immersive displays.</p>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="Galaxy A55"
+        />
+        <h2>Galaxy A55 5G</h2>
+        <p>Affordable powerhouse with 5G, Super AMOLED display & durability.</p>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="Galaxy M15"
+        />
+        <h2>Galaxy M15</h2>
+        <p>Massive battery with vibrant display and reliable performance.</p>
+      </div>
+    </div>
+
+    <a href="ecommerce-page.html">
+      <button class="explore-btn">Explore All Samsung Mobiles</button></a
+    >
   </body>
 </html>

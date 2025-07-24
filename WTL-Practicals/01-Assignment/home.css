@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+body {
+  font-family: 'Orbitron', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #020107, #020107, #020107, #061e7a);
+  color: white;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #020107, #061e7a, #020107);
+  padding: 20px;
+}
+
+.header h1 {
+  color: white;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-shadow: 2px 2px 8px rgba(0, 255, 255, 0.3);
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px;
+}
+
+.card img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 50px;
+}
+
+.card-text {
+  max-width: 600px;
+  text-align: center;
+}
+
+.card-text h1 {
+  color: #00f0ff;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 10px rgba(0, 240, 255, 0.4);
+}
+
+.card-text p {
+  color: #ddd;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.6;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+}
+
+.grid-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.product-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-card h2 {
+  color: #00d9ff;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  text-shadow: 0 0 6px rgba(0, 217, 255, 0.4);
+}
+
+.product-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.explore-btn {
+  display: block;
+  margin: 0 auto 50px auto;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-family: 'Orbitron', Arial, sans-serif;
+  color: white;
+  background-color: #0a58ca;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+}
