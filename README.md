@@ -17,3 +17,7 @@
 - **WTL**( Web Technology Laboratory )
   - **Course Code** : `LCC306`
   - `Assignment` : [ [Click Here](/WTL-Practicals) ]
+    
+- **DVSTL**(  Data Visualization & Story Telling Laboratory )
+  - **Course Code** : `LCC306`
+  - `Assignment` : [ [Click Here](/DVSTL-Practicals) ]
