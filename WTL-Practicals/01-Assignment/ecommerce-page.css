@@ -33,6 +33,7 @@ header h1 {
 nav {
   display: flex;
   flex-wrap: wrap;
+  max-width: 500px;
   margin-top: 0.5rem;
 }
 
