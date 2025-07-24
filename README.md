@@ -2,11 +2,11 @@
 
 ## Student Details
 
-**`Name` :  Atharva Kote<br>
+**`Name       ` :  Atharva Kote<br>
 `Roll Number` :  74<br>
-`Department` :  Computer<br>
-`Division` :  B<br>
-`PRN Number` :  UCS23M1074<br>**
+`Department ` :  Computer<br>
+`Division   ` :  B<br>
+`PRN Number ` :  UCS23M1074<br>**
 
 ## Course Details
 
