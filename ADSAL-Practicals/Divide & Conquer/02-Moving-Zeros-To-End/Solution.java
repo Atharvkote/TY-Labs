@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ZeroRearrange {
+public class Solution {
 
     // Merge function to push zeros to the end
     static void merge(int[] nums, int low, int high) {

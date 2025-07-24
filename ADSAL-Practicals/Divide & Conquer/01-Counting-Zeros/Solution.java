@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Solution {
     public static void main(String[] args) {
         int[] nums = new int[10];
         int choice = 1, ans = 0;

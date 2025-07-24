@@ -127,3 +127,8 @@ public class ZeroRearrange {
 }
 
 ```
+## Terminal Snapshots
+
+The following snapshot shows the terminal output after running the program. It demonstrates the input phase and the final output with zeros moved to the end.
+
+![Terminal Output](../../output-snapshots/ADSAL-02-01.png)
