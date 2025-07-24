@@ -7,9 +7,6 @@
 > * The `merge()` function detects a `0` during traversal and shifts it step-by-step toward the end within its segment.
 > * This technique demonstrates a recursive **divide-and-conquer** approach used for a rearrangement task, showcasing how sorting logic can be adapted for structural transformations.
 
-Let me know if you’d like this formatted into a README, added to your source code as a comment, or presented in another format like PDF or Markdown.
-
-
 ## Problem Statement
 
 Given an integer array containing 0s and non-zero values, write a program to **push all 0s to the end** while preserving the order of non-zero elements.
