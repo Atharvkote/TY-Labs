@@ -13,24 +13,18 @@
 
 </div>
 
-
 ### Student Details
 
-| Field         | Information       |
-|---------------|-------------------|
-| **Name**      | Atharva Kote      |
-| **Roll Number** | 74              |
-| **Department** | Computer          |
-| **Division**   | B                |
-| **PRN Number** | UCS23M1074       |
-
+**Name :  Atharva Kote<br>
+Roll Number :  74<br>
+Department :  Computer<br>
+Division :  B<br>
+PRN Number :  UCS23M1074<br>**
 
 ## Course Details
 
-| Attribute       | Value              |
-|-----------------|--------------------|
-| **Course Name** | ADSAL (Applied Data Structure & Algorithms Laboratory) |
-| **Course Code** | `LCC306`           |
-| **Faculty**     | Prof A. Bodhe      |
-| **Credits**     | `2 Credits`        |
-| **Type**        | Laboratory         |
+- **ADSAL**( Applied Data Structure & Algorithms Laboratory )
+  - **Course Code** : LCC306
+  - **Faculty** : Prof A. Bodhe
+  - **Credits** : 2 Credits
+  - **Type** : Labrotary
