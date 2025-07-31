@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <h1 id="heading">This DOM</h1>
+    <div>
+      <label for=""></label>
+      <input type="number" placeholder="Enter Number here" id="num1" />
+      <input type="number" placeholder="Enter Number here" id="num2" />
+      <button id="btnadd" type="submit">Add</button>
+      <button id="btnsub" type="submit">Subtracrt</button>
+      <div id="output"></div>
+    </div>
+    <script>
+      document.getElementById("heading").innerHTML =
+        "DOM Manipulation in JavaScript";
+      document.getElementById("heading").style.color = "green ";
+      document.getElementById("btnadd").addEventListener("click", () => {
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2").value;
+
+        const result = Number(num1) + Number(num2);
+        const p = document.createElement("p");
+        p.innerHTML = "The sum of " + num1 + " and " + num2 + " is: " + result;
+        document.getElementById("output").appendChild(p);
+      });
+
+      document.getElementById("btnsub").addEventListener("click", () => {
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2").value;
+
+        const result = Number(num1) - Number(num2);
+        const p = document.createElement("p");
+        p.innerHTML = "The diff of " + num1 + " and " + num2 + " is: " + result;
+        document.getElementById("output").appendChild(p);
+
+      });
+    </script>
+  </body>
+</html>

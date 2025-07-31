@@ -56,3 +56,8 @@ const mapData = numbers.map((num) => {
   return num * num;
 });
 console.log("Mapped data (each element's Square):", mapData);
+
+// 03 - Spread Operator - used to copy elements from one array to another
+console.log("Original array for Copying:", numbers);
+let copyData = [...numbers];
+console.log("Copied Array : " , copyData);
