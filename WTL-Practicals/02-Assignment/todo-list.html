@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List | Grid UI</title>
+    <link rel="stylesheet" href="todo-list.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>ToDo List</h1>
+      <form id="todo-form">
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="Add a new task..."
+          required
+        />
+        <button type="submit">Add</button>
+      </form>
+      <div id="todo-list" class="grid-container"></div>
+    </div>
+
+    <script>
+      const form = document.getElementById("todo-form");
+      const todoList = document.getElementById("todo-list");
+
+      const savedList = localStorage.getItem("todoList");
+      if (savedList) {
+        todoList.innerHTML = savedList;
+        addEventListenersToTasks();
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const input = document.getElementById("todo-input");
+        const newItem = document.createElement("div");
+        newItem.classList.add("todo-card");
+
+        newItem.innerHTML = `
+          <span>${input.value}</span>
+          <div class="btn-group">
+            <button class="delete-btn"><img src="./images/delete.svg" height="20" /></button>
+            <button class="edit-btn"><img src="./images/edit.svg" height="20" /></button>
+          </div>
+        `;
+
+        todoList.appendChild(newItem);
+        input.value = "";
+        addEventListenersToCard(newItem);
+        localStorage.setItem("todoList", todoList.innerHTML);
+      });
+
+      function addEventListenersToTasks() {
+        const cards = document.querySelectorAll(".todo-card");
+        cards.forEach((card) => addEventListenersToCard(card));
+      }
+
+      function addEventListenersToCard(card) {
+        const deleteBtn = card.querySelector(".delete-btn");
+        const editBtn = card.querySelector(".edit-btn");
+        const taskSpan = card.querySelector("span");
+
+        deleteBtn.addEventListener("click", () => {
+          card.remove();
+          localStorage.setItem("todoList", todoList.innerHTML);
+        });
+
+        editBtn.addEventListener("click", () => {
+          const newTask = prompt("Edit your task:", taskSpan.textContent);
+          if (newTask !== null) {
+            taskSpan.textContent = newTask;
+            localStorage.setItem("todoList", todoList.innerHTML);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -6,11 +6,9 @@
 > This program finds the **smallest positive integer `x`** such that the factorial of `x` (denoted as `x!`) contains at least `n` trailing zeroes.
 > It uses a **mathematical observation** and applies **binary search** to avoid large factorial computations.
 
-
 ## Problem Statement
 
 Given a number `n`, find the **smallest integer `x`** such that the number of trailing zeroes in `x!` is **greater than or equal to `n`**.
-
 
 ## Mathematical Insight
 
@@ -22,13 +20,11 @@ Given a number `n`, find the **smallest integer `x`** such that the number of tr
 floor(x / 5) + floor(x / 25) + floor(x / 125) + ...
 ```
 
-
 ## Approach
 
 1. Define a function to compute trailing zeroes in `x!`.
 2. Use **binary search** between `0` and `5 * n` to find the smallest such `x`.
 3. Return the smallest `x` whose factorial has at least `n` trailing zeroes.
-
 
 ## Time Complexity
 
@@ -37,7 +33,6 @@ floor(x / 5) + floor(x / 25) + floor(x / 125) + ...
 | Trailing count | O(log x)    |
 | Binary search  | O(log (5n)) |
 | Overall        | O(log² n)   |
-
 
 ## Test Case
 
@@ -56,14 +51,12 @@ Smallest number whose factorial has at least 6 trailing zeroes is: 25
 Explanation:
 25! = 15,511,210,043,330,985,984,000,000 → contains **6 trailing zeroes**
 
-
 ## Features
 
 * Efficient for large `n` (up to 10⁶)
 * No factorials are computed directly
 * Logarithmic complexity with respect to `n`
 * Mathematical + binary search based reasoning
-
 
 ## Java Implementation
 
@@ -113,7 +106,6 @@ public class FactorialTrailingZeroes {
 }
 ```
 
-
 ## Sample Output
 
 ```
@@ -121,8 +113,6 @@ Enter n: 10
 Smallest number whose factorial has at least 10 trailing zeroes is: 45
 ```
 
-
 ## Educational Value
 
 This implementation is a classic example of how **binary search** can solve numeric problems efficiently by **modeling factorial growth without computation**. It teaches how to combine mathematical insights with algorithmic thinking.
-

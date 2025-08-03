@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List | Home</title>
+    <link rel="stylesheet" href="home-page.css" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hero-text">
+        <h1>Welcome to Your Productivity Hub</h1>
+        <p>
+          Organize your day, achieve your goals, and get more done — one task at
+          a time.
+        </p>
+      </div>
+      <div class="hero-image">
+        <img src="images/Logo.png" alt="ToDo Illustration" />
+      </div>
+    </div>
+
+    <!-- Featured Task -->
+    <h1>Your Upcoming Task</h1>
+    <div class="container">
+      <div id="featured-task" class="todo-card">
+        <span>Loading task...</span>
+      </div>
+      <a href="todo-list.html" class="view-all-btn">🗂 View All Tasks</a>
+    </div>
+
+    <!-- Daily Thought -->
+    <h1>🧠 Daily Thought</h1>
+    <div class="container">
+      <p id="thought">
+        "The secret of getting ahead is getting started." – Mark Twain
+      </p>
+    </div>
+
+    <!-- Tips Section -->
+    <h1>💡 Productivity Tip</h1>
+    <div class="container">
+      <ul class="tip-list">
+        <li>
+          Use the 2-minute rule: If a task takes less than 2 minutes, do it
+          immediately.
+        </li>
+        <li>Break big goals into smaller, manageable tasks.</li>
+        <li>Take short breaks every 25–30 minutes (Pomodoro Technique).</li>
+      </ul>
+    </div>
+
+    <!-- Add Task Prompt -->
+    <h1>📌 Got Something to Do?</h1>
+    <div class="container">
+      <a href="todo-list.html" class="add-task-btn">➕ Add a New Task</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 ToDo Hub. Built with focus and ambition 💼</p>
+    </footer>
+
+    <script>
+      const container = document.getElementById("featured-task");
+      const savedList = localStorage.getItem("todoList");
+
+      if (savedList) {
+        const temp = document.createElement("div");
+        temp.innerHTML = savedList;
+        const firstTask = temp.querySelector(".todo-card span");
+
+        if (firstTask) {
+          container.innerHTML = `<span>${firstTask.textContent}</span>`;
+        } else {
+          container.innerHTML = "<span>No tasks found.</span>";
+        }
+      } else {
+        container.innerHTML = "<span>No tasks saved yet.</span>";
+      }
+    </script>
+  </body>
+</html>

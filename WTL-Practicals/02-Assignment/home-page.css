@@ -1,0 +1,138 @@
+/* Base Styling */
+body {
+  margin: 0;
+  font-family: "DM Sans", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #6833bd, #000000);
+  color: white;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  max-width: 70vw;
+  margin: auto;
+  text-align: left;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 20px 20px;
+}
+
+.hero-image img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 100px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 52px;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #dddddd;
+  line-height: 1.5;
+}
+
+/* Main Container Styling */
+.container {
+  background: #ffffff1a;
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Section Headers */
+.container h2 {
+  font-size: 26px;
+  color: #ffccff;
+  margin-bottom: 16px;
+}
+
+/* Task Card */
+.todo-card {
+  background: #8888882e;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  color: white;
+}
+
+/* View All Button */
+.view-all-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 16px;
+  background-color: #7f5af0;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #5a34d1;
+}
+
+/* Add Task Button */
+.add-task-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 16px;
+  background-color: #00b894;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+.add-task-btn:hover {
+  background-color: #009874;
+}
+
+/* Daily Thought */
+#thought {
+  font-size: 20px;
+  font-style: italic;
+  color: #eeeeee;
+  margin-top: 10px;
+}
+
+/* Tips List */
+.tip-list {
+  list-style-type: "⭐ ";
+  padding-left: 20px;
+  text-align: left;
+  color: #dddddd;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  color: #cccccc;
+  font-size: 14px;
+  text-align: center;
+}
+footer a {
+  color: #7f5af0;
+  text-decoration: none;
+}

@@ -7,6 +7,7 @@ public class Solution {
         int i = 0;
         boolean zeroStarted = false;
 
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
 
         while (i < 10) {
@@ -26,6 +27,7 @@ public class Solution {
             }
             nums[i++] = choice;
         }
+
 
         int low = 0;
         int high = i - 1;

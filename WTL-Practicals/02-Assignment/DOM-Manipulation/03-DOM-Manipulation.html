@@ -13,7 +13,7 @@
       h1 {
         transition: all 0.3s ease;
       }
-      #btn {
+      button {
         padding: 10px 20px;
         background-color: #007bff;
         font-size: 16px;
@@ -22,16 +22,37 @@
         border-radius: 5px;
         cursor: pointer;
       }
+
+      .container {
+        margin: 30px auto;
+        max-width: 600px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+
     </style>
   </head>
   <body>
-    <h1 id="heading">Click the Button</h1>
-    <h1 id="welcome">Welcome</h1>
-    <button id="btn">Apply Sytles</button>
+    <div class="container" id="main">
+      <h1 id="heading">Click the Button</h1>
+      <h1 id="welcome">Welcome</h1>
+      <button id="btn">Apply Sytles</button>
+    </div>
+    <button id="toggler">Toggle Content</button>
 
     <script>
       const trigger = document.getElementById("btn");
       trigger.addEventListener("click", applyStyles);
+      const toggler = document.getElementById("toggler");
+      toggler.addEventListener("click", () =>{
+        const main = document.getElementById("main");
+        if (main.style.display === "none") {
+          main.style.display = "block";
+        } else {
+          main.style.display = "none";
+        }
+      });
 
       function applyStyles() {
         document.getElementById("heading").style.color = "blue";

@@ -47,5 +47,6 @@ public class Solution {
             System.out.print(nums[i] + " , ");
         }
         System.out.println("]");
+        sc.close();
     }
 }
