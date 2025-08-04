@@ -130,5 +130,3 @@ Removes a task from both the UI and `localStorage`.
 * The task interface is clean, responsive, and supports real-time task interactions.
 * Both UI components use a consistent visual style to create a seamless experience.
 * No backend or framework is required — everything works client-side using vanilla JavaScript and CSS.
-
-Would you like me to export this as a `README.md` file or include GitHub Pages deployment instructions?
