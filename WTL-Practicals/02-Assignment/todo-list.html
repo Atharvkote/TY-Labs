@@ -71,6 +71,8 @@
           if (newTask !== null) {
             taskSpan.textContent = newTask;
             localStorage.setItem("todoList", todoList.innerHTML);
+          } else {
+            alert("Task cannot be empty!");
           }
         });
       }

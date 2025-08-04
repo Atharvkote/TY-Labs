@@ -75,6 +75,10 @@
       background-color: rgba(6, 209, 6, 0.252);
       padding: 10px;
     }
+
+    tbody tr {
+      padding: 20px;
+    }
   </style>
   <body>
     <div class="container">
@@ -96,20 +100,51 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody id="studentTable">
-        </tbody>
+        <tbody id="studentTable"></tbody>
       </table>
       <script>
         const addButton = document.getElementById("add");
-        addButton.addEventListener("click" , ()=> {
-            const nameInput = document.getElementsById("name");
-            const name = nameInput.value;
-            if (name.trim() === "") {
-                alert("Please enter a valid name.");
-                return;
-            }
+        addButton.addEventListener("click", () => {
+          const nameInput = document.getElementById("name");
+          const name = nameInput.value;
+          if (name.trim() === "") {
+            alert("Please enter a valid name.");
+            return;
+          }
 
-        })
+          const table = document.getElementById("studentTable");
+          // const noRows = `
+          //   <td colspan="3" style="text-align: center;">No students added yet.</td>
+          // `;
+          // if (table.innerHTML == "") {
+          //   const row = document.createElement("tr").innerHTML = noRows
+          //   table.appendChild(
+          //      row
+          //   );
+          // }
+          const newRow = document.createElement("tr");
+          newRow.classList.add("student-row");
+          const nameCell = document.createElement("td");
+          nameCell.textContent = name;
+          const voteCell = document.createElement("td");
+          voteCell.textContent = "0";
+          const actionCell = document.createElement("td");
+          const voteButton = document.createElement("button");
+          voteButton.textContent = "Vote";
+          voteButton.classList.add("vote-button");
+
+          voteButton.addEventListener("click", (e) => {
+            e.target.parentElement.previousElementSibling.textContent++;
+          });
+
+          actionCell.appendChild(voteButton);
+
+          newRow.appendChild(nameCell);
+          newRow.appendChild(voteCell);
+          newRow.appendChild(actionCell);
+          table.appendChild(newRow);
+          nameInput.value = "";
+        });
       </script>
     </div>
   </body>

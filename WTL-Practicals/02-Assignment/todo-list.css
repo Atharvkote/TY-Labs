@@ -108,7 +108,6 @@ form button:hover {
   transform: scale(1.2);
 }
 
-/* Tablet (≤ 1024px) */
 @media (max-width: 1024px) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
@@ -124,11 +123,10 @@ form button:hover {
   }
 }
 
-/* Mobile (≤ 768px) */
 @media (max-width: 768px) {
   body {
     padding: 20px 10px;
-    align-items: stretch;
+    align-items: center;
   }
 
   .container {
@@ -156,7 +154,6 @@ form button:hover {
   }
 }
 
-/* Extra Small Devices (≤ 480px) */
 @media (max-width: 480px) {
   h1 {
     font-size: 22px;

@@ -7,7 +7,6 @@ body {
   text-align: center;
 }
 
-/* Hero Section */
 .hero-section {
   display: flex;
   max-width: 70vw;
@@ -43,7 +42,6 @@ h1 {
   line-height: 1.5;
 }
 
-/* Main Container Styling */
 .container {
   background: #ffffff1a;
   backdrop-filter: blur(10px);
@@ -55,14 +53,12 @@ h1 {
   text-align: center;
 }
 
-/* Section Headers */
 .container h2 {
   font-size: 26px;
   color: #ffccff;
   margin-bottom: 16px;
 }
 
-/* Task Card */
 .todo-card {
   background: #8888882e;
   padding: 20px;
@@ -73,7 +69,6 @@ h1 {
   color: white;
 }
 
-/* View All Button */
 .view-all-btn {
   display: inline-block;
   padding: 14px 28px;
@@ -82,14 +77,13 @@ h1 {
   color: white;
   text-decoration: none;
   border-radius: 10px;
-  transition: background 0.3s ease;
+  
 }
 
 .view-all-btn:hover {
   background-color: #5a34d1;
 }
 
-/* Add Task Button */
 .add-task-btn {
   display: inline-block;
   padding: 14px 28px;
@@ -98,7 +92,6 @@ h1 {
   color: white;
   text-decoration: none;
   border-radius: 10px;
-  transition: background 0.3s ease;
   margin-top: 20px;
 }
 
@@ -106,7 +99,6 @@ h1 {
   background-color: #009874;
 }
 
-/* Daily Thought */
 #thought {
   font-size: 20px;
   font-style: italic;
@@ -114,9 +106,8 @@ h1 {
   margin-top: 10px;
 }
 
-/* Tips List */
 .tip-list {
-  list-style-type: "⭐ ";
+  list-style-type: disc;
   padding-left: 20px;
   text-align: left;
   color: #dddddd;
@@ -124,7 +115,6 @@ h1 {
   margin-top: 20px;
 }
 
-/* Footer */
 footer {
   margin-top: 60px;
   padding: 20px;
