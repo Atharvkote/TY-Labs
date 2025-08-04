@@ -49,13 +49,32 @@ The project consists of two main sections:
 | Gradient Backgrounds   | Created using `linear-gradient` for visual depth and style             |
 | Glassmorphism          | Achieved using `backdrop-filter: blur(10px)` for container UI          |
 
-## Box Model Diagram (Mermaid)
+## JS Control Flow 
 
 ```mermaid
-graph TD
-    A[Content] --> B[Padding]
-    B --> C[Border]
-    C --> D[Margin]
+flowchart TD
+    Start[Page Loads] --> CheckLocalStorage{Is localStorage 'todoList' present?}
+    
+    CheckLocalStorage -- Yes --> LoadTasks[Load saved tasks into UI]
+    LoadTasks --> AddEventListeners[Attach event listeners to each task card]
+
+    CheckLocalStorage -- No --> ShowEmptyState[Display 'No tasks saved yet.']
+
+    UserAction[User submits new task] --> ValidateInput{Is input valid?}
+    ValidateInput -- Yes --> CreateCard[Create new .todo-card with task text]
+    CreateCard --> AppendCard[Append new task card to grid]
+    AppendCard --> AddListeners[Attach delete/edit listeners]
+    AddListeners --> SaveStorage[Update localStorage with new task list]
+
+    ValidateInput -- No --> RejectTask[Show error or ignore empty input]
+
+    EditClick[User clicks Edit] --> PromptEdit[Show prompt to enter new task]
+    PromptEdit --> UpdateText[Update span text if valid]
+    UpdateText --> SaveStorage
+
+    DeleteClick[User clicks Delete] --> RemoveCard[Remove task card from DOM]
+    RemoveCard --> SaveStorage
+
 ```
 
 Each task card and layout container respects the box model to ensure proper alignment and spacing within and across elements.
