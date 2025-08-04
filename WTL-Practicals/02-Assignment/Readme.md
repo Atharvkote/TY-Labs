@@ -1,4 +1,4 @@
-# ToDo List Web App – Homepage and Task Grid UI
+# ToDo List Web App
 
 This project presents a complete task management experience with a stylized homepage and an interactive task listing interface. It integrates modern HTML, CSS, and JavaScript practices, featuring a vibrant swag-inspired design, localStorage-based persistence, and responsive layouts using Flexbox and dynamic CSS techniques.
 
@@ -8,7 +8,7 @@ This project presents a complete task management experience with a stylized home
 | ---------------- | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
 | **Desktop View** | ![Desktop 1](../../.git-config/output-snapshots/WTL-02-01.png) | ![Desktop 2](../../.git-config/output-snapshots/WTL-02-02.png) | ![Desktop 3](../../.git-config/output-snapshots/WTL-02-03.png) |
 | **Mobile View**  | ![Mobile 1](../../.git-config/output-snapshots/WTL-02-04.png)   | 
-                         |
+                         
 
 ## Overview
 
