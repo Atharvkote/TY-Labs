@@ -7,8 +7,7 @@ This project presents a complete task management experience with a stylized home
 | View Type        | Screenshot 1                               | Screenshot 2                               | Screenshot 3                               |
 | ---------------- | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
 | **Desktop View** | ![Desktop 1](../../.git-config/output-snapshots/WTL-02-01.png) | ![Desktop 2](../../.git-config/output-snapshots/WTL-02-02.png) | ![Desktop 3](../../.git-config/output-snapshots/WTL-02-03.png) |
-| **Mobile View**  | ![Mobile 1](../../.git-config/output-snapshots/WTL-02-04.png)   | 
-                         
+| **Mobile View**  | ![Mobile 1](../../.git-config/output-snapshots/WTL-02-04.png)   |
 
 ## Overview
 
