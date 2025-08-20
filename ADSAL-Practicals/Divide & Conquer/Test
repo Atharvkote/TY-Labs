@@ -1,0 +1,34 @@
+public class StockProfitPeak {
+
+    // Function to calculate maximum profit using peak strategy
+    static int maxProfit(int[] arr) {
+        int n = arr.length;
+        int profit = 0;
+        int i = 0;
+
+        while (i < n) {
+            // find the peak (max element) in the remaining array
+            int peakIndex = i;
+            for (int j = i; j < n; j++) {
+                if (arr[j] > arr[peakIndex]) {
+                    peakIndex = j;
+                }
+            }
+
+            // buy at all days before peak
+            for (int k = i; k < peakIndex; k++) {
+                profit += (arr[peakIndex] - arr[k]);
+            }
+
+            // move to the next segment after peak
+            i = peakIndex + 1;
+        }
+
+        return profit;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {5, 7, 9, 1, 4, 5, 7};
+        System.out.println("Maximum Profit = " + maxProfit(arr));
+    }
+}
