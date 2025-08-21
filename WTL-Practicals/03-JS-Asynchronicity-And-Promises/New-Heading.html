@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>India Top Headlines</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: linear-gradient(to right, #f9fafc, #eef2f7);
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #1d1d1d;
+        font-size: 2.2rem;
+      }
+
+      #news-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 10px;
+      }
+
+      .article {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .article:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+      }
+
+      .article img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .article-content {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      .article h2 {
+        font-size: 18px;
+        margin: 0 0 10px;
+        line-height: 1.4;
+        color: #111;
+        font-weight: 600;
+      }
+
+      .article p {
+        font-size: 14px;
+        color: #555;
+        flex-grow: 1;
+        margin: 0 0 12px;
+      }
+
+      .article a {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        background: #0077ff;
+        padding: 8px 14px;
+        border-radius: 6px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        align-self: flex-start;
+      }
+
+      .article a:hover {
+        background: #0056cc;
+        transform: scale(1.05);
+      }
+
+      @media screen and (max-width: 768px) {
+        body {
+          padding: 15px;
+        }
+        h1 {
+          font-size: 1.8rem;
+        }
+        .article img {
+          height: 160px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+        .article-content {
+          padding: 12px;
+        }
+        .article h2 {
+          font-size: 16px;
+        }
+        .article p {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>US Top Headlines</h1>
+    <div id="news-container"></div>
+
+    <script>
+      const apiKey = "c3c808a6a66b4db3ab74444b11632bcf";
+      const url = `https://newsapi.org/v2/top-headlines?country=us&pageSize=8&apiKey=${apiKey}`;
+
+      async function fetchTopHeadlines() {
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+          if (data.status !== "ok") return;
+          const container = document.getElementById("news-container");
+          container.innerHTML = "";
+          data.articles.forEach((article) => {
+            const div = document.createElement("div");
+            div.className = "article";
+            if (article.urlToImage) {
+              const img = document.createElement("img");
+              img.src = article.urlToImage;
+              img.alt = article.title || "News image";
+              div.appendChild(img);
+            }
+            const content = document.createElement("div");
+            content.className = "article-content";
+            const title = document.createElement("h2");
+            title.textContent = article.title;
+            content.appendChild(title);
+            if (article.description) {
+              const desc = document.createElement("p");
+              desc.textContent = article.description;
+              content.appendChild(desc);
+            }
+            const link = document.createElement("a");
+            link.href = article.url;
+            link.textContent = "Read more";
+            link.target = "_blank";
+            content.appendChild(link);
+            div.appendChild(content);
+            container.appendChild(div);
+          });
+        } catch (err) {
+          console.error("Fetch error:", err);
+        }
+      }
+      fetchTopHeadlines();
+    </script>
+  </body>
+</html>

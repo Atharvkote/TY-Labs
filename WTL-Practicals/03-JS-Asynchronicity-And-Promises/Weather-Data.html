@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delhi Weather</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #74ebd5, #9face6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .weather-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      padding: 30px;
+      text-align: center;
+      width: 320px;
+      transition: transform 0.3s ease;
+    }
+
+    .weather-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .weather-card h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .weather-card img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .temp {
+      font-size: 40px;
+      font-weight: bold;
+      color: #0077ff;
+      margin: 10px 0;
+    }
+
+    .condition {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 15px;
+      text-transform: capitalize;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .details div {
+      background: #f0f4ff;
+      padding: 10px;
+      border-radius: 10px;
+      flex: 1;
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="weather-card" id="weather">
+    <h2>Loading...</h2>
+  </div>
+
+  <script>
+    const apiKey = "d50910772f254a4d830125023251404"; // replace with your WeatherAPI.com key
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=Ahmednagar`;
+
+    async function fetchWeather() {
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+
+        console.log(data); // debug
+
+        const card = document.getElementById("weather");
+        card.innerHTML = `
+          <h2>${data.location.name}, ${data.location.country}</h2>
+          <img src="https:${data.current.condition.icon}" alt="${data.current.condition.text}">
+          <div class="temp">${data.current.temp_c}°C</div>
+          <div class="condition">${data.current.condition.text}</div>
+          <div class="details">
+            <div>💨 Wind: ${data.current.wind_kph} kph</div>
+            <div>💧 Humidity: ${data.current.humidity}%</div>
+          </div>
+        `;
+      } catch (err) {
+        console.error("Error:", err);
+        document.getElementById("weather").innerHTML = "<h2>Failed to load weather</h2>";
+      }
+    }
+
+    fetchWeather();
+  </script>
+</body>
+</html>
