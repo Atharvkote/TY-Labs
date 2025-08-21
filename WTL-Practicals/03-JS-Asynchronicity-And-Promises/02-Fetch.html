@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    
+    body {
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    h1 {
+      transition: all 0.3s ease;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: green;
+      font-size: 16px;
+      color: white;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid green;
+      background-color: rgba(186, 238, 186, 0.011);
+      border-radius: 5px;
+      outline: none;
+      margin-right: 10px;
+    }
+
+    :placeholder {
+      color: green;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+
+    .form {
+      border: 2px solid green;
+      width: 50%;
+      padding: 5vh;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      background-color: rgba(6, 209, 6, 0.252);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header > h1 {
+      color: green;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      border-collapse: collapse;
+      border: 2px solid green;
+      border-radius: 10px;
+    }
+
+    th {
+      background-color: rgba(6, 209, 6, 0.252);
+      padding: 10px;
+    }
+
+    td{
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid green;
+      font-weight: normal;
+    }
+  
+
+    tbody tr {
+      padding: 20px;
+      text-align: left;
+
+    }
+    .completed {
+      color: green;
+      font-weight: bold;
+    }
+
+    .not-completed {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <button id="btn">Get Data In Table</button>
+    <script>
+      document.getElementById("btn").addEventListener("click", () => {
+        let prom = fetch("https://dummyjson.com/todos");
+        prom.then((res) => {
+          return res.json();
+        }).then((todos) => {
+          console.log(todos);
+          const table = document.createElement("table");
+          table.classList.add("table");
+          table.setAttribute("border", "1");
+          const tbody = document.createElement("tbody");
+          table.append(tbody);
+
+          // Create table header dynamically
+          const tdr = document.createElement("tr");
+          const keys = Object.keys(todos.todos[0]);
+          keys.forEach((k) => {
+            const th = document.createElement("th");
+            th.innerHTML = k.toUpperCase();
+            tdr.append(th);
+          });
+          tbody.append(tdr);
+
+          todos.todos.forEach((item) => {
+            const tr = document.createElement("tr");
+            keys.forEach((k) => {
+              const td = document.createElement("td");
+              let value = item[k];
+              if (typeof value === "boolean") {
+                if(value) {
+                  value = "Completed";
+                  td.classList.add("completed");
+                } else {
+                  value = "Not Completed";
+                  td.classList.add("not-completed");
+                }
+              }
+              td.innerHTML = value;
+              tr.append(td);
+            });
+            tbody.append(tr);
+          });
+
+          document.body.append(table);
+        });
+        });
+    
+    </script>
+  </body>
+</html>

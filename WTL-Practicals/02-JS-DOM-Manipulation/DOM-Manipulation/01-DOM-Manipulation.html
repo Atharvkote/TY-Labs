@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <h1 id="heading">This DOM</h1>
+    <div>
+      <label for=""></label>
+      <input type="text" placeholder="Enter Your name here" id="nameInput" />
+      <button id="btn" type="submit">Submit</button>
+      <div id="output">
+        <h3>You Input History :</h3>
+      </div>
+    </div>
+    <script>
+      document.getElementById("heading").innerHTML =
+        "DOM Manipulation in JavaScript";
+      document.getElementById("heading").style.color = "green ";
+      document.getElementById("btn").addEventListener("click", () => {
+        let name = document.getElementById("nameInput");
+        if (name.value === "" || !name.value) {
+          alert("Please enter your name");
+        } else {
+          alert("Hello " + name.value + ", welcome to DOM Manipulation!");
+          const p = document.createElement("p");
+          p.innerHTML =
+            "Hello " + name.value + ", welcome to DOM Manipulation!";
+          document.getElementById("output").appendChild(p);
+          name.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>
