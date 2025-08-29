@@ -1,16 +1,16 @@
 # Fetch Data from Public APIs
 
-This repository contains **three interactive web projects** built with HTML, CSS, and JavaScript. Each project integrates external APIs or dynamic DOM manipulation, showcasing practical use of modern front-end concepts.
+This repository contains **three interactive web Webpages** built with HTML, CSS, and JavaScript. Each Webpage integrates external APIs or dynamic DOM manipulation, showcasing practical use of modern front-end concepts.
 
-## Project 1: Todo Table App
+## Webpage 1: Todo Table App
 
-This project fetches **Todo items** from the [DummyJSON API](https://dummyjson.com/todos) and dynamically generates a styled table with completion status indicators.
+This Webpage fetches **Todo items** from the [DummyJSON API](https://dummyjson.com/todos) and dynamically generates a styled table with completion status indicators.
 
 ### Assignment Output
 
 | View Type        | Screenshot 1                                                    |
 | ---------------- | --------------------------------------------------------------- |
-| **Desktop View** | ![Desktop 1](../../.git-config/output-snapshots/WTL-03-03.png) |
+| **Desktop View** | ![Desktop 1](../../.git-config/output-snapshots/WTL-03-01.png) |
 
 ### Overview
 
@@ -54,9 +54,9 @@ flowchart TD
     AppendRow --> Render[Append table to DOM]
 ```
 
-## Project 2: US Top Headlines App
+## Webpage 2: US Top Headlines App
 
-This project fetches **Top Headlines** from [NewsAPI](https://newsapi.org/) for the **United States** and displays them in a **card-based responsive layout**.
+This Webpage fetches **Top Headlines** from [NewsAPI](https://newsapi.org/) for the **United States** and displays them in a **card-based responsive layout**.
 
 ### Assignment Output
 
@@ -104,9 +104,9 @@ flowchart TD
 
 ```
 
-## Project 3: Weather App
+## Webpage 3: Weather App
 
-This project fetches and displays **real-time weather information** for **Ahmednagar** using [WeatherAPI.com](https://www.weatherapi.com/).
+This Webpage fetches and displays **real-time weather information** for **Ahmednagar** using [WeatherAPI.com](https://www.weatherapi.com/).
 
 ### Assignment Output
 
@@ -157,7 +157,7 @@ flowchart TD
 
 # Final Notes
 
-* Each project highlights **practical use of APIs, DOM manipulation, and responsive UI design**.
-* Projects are lightweight, built with **vanilla HTML, CSS, and JavaScript** (no frameworks required).
+* Each Webpage highlights **practical use of APIs, DOM manipulation, and responsive UI design**.
+* Webpages are lightweight, built with **vanilla HTML, CSS, and JavaScript** (no frameworks required).
 * Screenshots provided demonstrate **final rendered outputs**.
-* These can be extended into larger projects (task managers, news dashboards, or full weather apps).
+* These can be extended into larger Webpages (task managers, news dashboards, or full weather apps).
