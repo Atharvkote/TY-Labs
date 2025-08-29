@@ -130,6 +130,7 @@
           const container = document.getElementById("news-container");
           container.innerHTML = "";
           data.articles.forEach((article) => {
+            if (!article.title || !article.urlToImage) return;
             const div = document.createElement("div");
             div.className = "article";
             if (article.urlToImage) {

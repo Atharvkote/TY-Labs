@@ -10,7 +10,7 @@ This project fetches **Todo items** from the [DummyJSON API](https://dummyjson.c
 
 | View Type        | Screenshot 1                                                    |
 | ---------------- | --------------------------------------------------------------- |
-| **Desktop View** | ![Desktop 1](../../.git-config/output-snapshots/todo-table.png) |
+| **Desktop View** | ![Desktop 1](../../.git-config/output-snapshots/WTL-03-03.png) |
 
 ### Overview
 
@@ -62,7 +62,7 @@ This project fetches **Top Headlines** from [NewsAPI](https://newsapi.org/) for 
 
 | View Type        | Screenshot 1                                                        |
 | ---------------- | ------------------------------------------------------------------- |
-| **Desktop View** | ![Desktop 2](../../.git-config/output-snapshots/news-headlines.png) |
+| **Desktop View** | ![Desktop 2](../../.git-config/output-snapshots/WTL-03-02.png) |
 
 ### Overview
 
@@ -112,7 +112,7 @@ This project fetches and displays **real-time weather information** for **Ahmedn
 
 | View Type        | Screenshot 1                                                     |
 | ---------------- | ---------------------------------------------------------------- |
-| **Desktop View** | ![Desktop 3](../../.git-config/output-snapshots/weather-app.png) |
+| **Desktop View** | ![Desktop 3](../../.git-config/output-snapshots/WTL-03-03.png) |
 
 ### Overview
 
