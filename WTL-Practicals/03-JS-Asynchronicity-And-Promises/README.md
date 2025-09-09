@@ -10,7 +10,7 @@ This Webpage fetches **Todo items** from the [DummyJSON API](https://dummyjson.c
 
 | View Type        | Screenshot 1                                                    |
 | ---------------- | --------------------------------------------------------------- |
-| **Desktop View** | ![Desktop 1](../../.git-config/output-snapshots/WTL-03-01.png) |
+| **Desktop View** | ![Desktop 1](../../.git-confi g/output-snapshots/WTL-03-01.png) |
 
 ### Overview
 

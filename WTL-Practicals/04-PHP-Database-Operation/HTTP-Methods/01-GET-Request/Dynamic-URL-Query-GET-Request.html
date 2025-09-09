@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="">Enter Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter Name" />
+      </div>
+      <div>
+        <label for="">Enter Colour</label>
+        <input
+          type="text"
+          id="colour"
+          name="colour"
+          placeholder="Enter Colour"
+        />
+      </div>
+      <button id="submit">Send Data</button>
+    </form>
+
+    <script>
+      async function getdata() {
+        const name = document.getElementById("name").value;
+        const colour = document.getElementById("colour").value;
+        let data = await fetch(
+          `http://localhost/01_TESTING/GET-Request/server/GET-text-reponse.php?name=${name}&colour=${colour}`
+        );
+        let parsedData = await data.text();
+        const div = document.createElement("div");
+        div.innerText = parsedData;
+        document.body.appendChild(div);
+      }
+
+      document.getElementById("submit").addEventListener("click", (e) => {
+        e.preventDefault();
+        getdata();
+      });
+    </script>
+  </body>
+</html>

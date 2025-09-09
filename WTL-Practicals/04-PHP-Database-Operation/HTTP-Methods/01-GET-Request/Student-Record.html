@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Records</title>
+    <style>
+      body {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      h1 {
+        transition: all 0.3s ease;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: green;
+        font-size: 16px;
+        color: white;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid green;
+        background-color: rgba(186, 238, 186, 0.011);
+        border-radius: 5px;
+        outline: none;
+        margin-right: 10px;
+      }
+      ::placeholder {
+        color: green;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .header > h1 {
+        color: green;
+      }
+      .form {
+        border: 2px solid green;
+        width: 60%; /* ✅ add width back */
+        padding: 5vh;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        background-color: rgba(6, 209, 6, 0.252);
+        margin: auto;
+      }
+
+      table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        border: 2px solid green;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      th,
+      td {
+        border: 1px solid green;
+        padding: 10px;
+      }
+      th {
+        background-color: rgba(6, 209, 6, 0.252);
+      }
+      tbody tr:nth-child(even) {
+        background-color: #f9fff9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Student Records</h1>
+    </div>
+
+    <div class="container">
+      <h2>All Students</h2>
+      <button onclick="fetchAll()">Load All Students</button>
+    </div>
+    <div id="allRecords"></div>
+
+    <div class="container">
+      <h2>Search by Department</h2>
+      <div class="form">
+        <input
+          type="text"
+          name="name"
+          id="deptInput"
+          placeholder="Enter Department"
+        />
+        <button onclick="fetchByDept()">Search</button>
+      </div>
+    </div>
+    <div id="deptRecords"></div>
+
+    <div class="container">
+      <h2>Search by Name/PRN</h2>
+      <div class="form">
+        <input
+          type="text"
+          na
+          id="searchInput"
+          placeholder="Enter Name or PRN"
+        />
+        <button onclick="fetchBySearch()">Search</button>
+      </div>
+    </div>
+    <div id="searchRecord"></div>
+
+    <script>
+      function createTable(data) {
+        if (!data || data.length === 0) return "<p>No records found.</p>";
+        let table =
+          "<table><thead><tr><th>Name</th><th>Department</th><th>Class</th><th>PRN</th></tr></thead><tbody>";
+        data.forEach((stu) => {
+          table += `<tr>
+          <td>${stu.name}</td>
+          <td>${stu.department}</td>
+          <td>${stu.class}</td>
+          <td>${stu.prn}</td>
+        </tr>`;
+        });
+        table += "</tbody></table>";
+        return table;
+      }
+
+      async function fetchAll() {
+        let res = await fetch(
+          "http://localhost/01_TESTING/GET-Request/server/GET-student-record-reponse.php"
+        );
+        let data = await res.json();
+        document.getElementById("allRecords").innerHTML = createTable(data);
+      }
+
+      async function fetchByDept() {
+        let dept = document.getElementById("deptInput").value.trim();
+        if (!dept) return alert("Enter a department!");
+        let res = await fetch(
+          `http://localhost/01_TESTING/GET-Request/server/GET-student-record-filter.php?department=${dept}`
+        );
+        let data = await res.json();
+        document.getElementById("deptRecords").innerHTML = createTable(data);
+      }
+
+      async function fetchBySearch() {
+        let val = document.getElementById("searchInput").value.trim();
+        if (!val) return alert("Enter a name or PRN!");
+        let res = await fetch(
+          "http://localhost/01_TESTING/GET-Request/server/GET-student-record-search.php?search=" +
+            val
+        );
+        let data = await res.json();
+        document.getElementById("searchRecord").innerHTML = createTable(data);
+      }
+    </script>
+  </body>
+</html>
