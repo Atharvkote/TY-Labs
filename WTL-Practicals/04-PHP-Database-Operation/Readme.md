@@ -1,5 +1,3 @@
-Perfect 👍 now that I’ve got your **full PHP codebase**, here’s a polished README tailored around your **Student CRUD App with PHP + MySQL backend**.
-This is more PHP-centric than the ToDo List README and highlights database interactions, JSON flows, and error handling.
 
 
 # Student CRUD Web App (PHP + MySQL)
